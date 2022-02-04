@@ -1,11 +1,10 @@
-"""Кофнфиг серверного логгера"""
-
+"""Конфиг серверного логгера"""
 import sys
-import os
+sys.path.append('../')
 import logging
 import logging.handlers
+import os
 from common.variables import LOGGING_LEVEL
-sys.path.append('../')
 
 # создаём формировщик логов (formatter):
 SERVER_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message)s')

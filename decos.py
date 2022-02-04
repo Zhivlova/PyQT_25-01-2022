@@ -6,14 +6,10 @@ import logs.config_server_log
 import logs.config_client_log
 
 # метод определения модуля, источника запуска.
-# Метод find () возвращает индекс первого вхождения искомой подстроки,
-# если он найден в данной строке.
-# Если его не найдено, - возвращает -1.
+
 if sys.argv[0].find('client') == -1:
-    # если не клиент то сервер!
     LOGGER = logging.getLogger('server')
 else:
-    # ну, раз не сервер, то клиент
     LOGGER = logging.getLogger('client')
 
 
