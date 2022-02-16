@@ -25,7 +25,9 @@ def log(func_to_log):
 
     def log_saver(*args, **kwargs):
         logger.debug(
-            f'Была вызвана функция {func_to_log.__name__} c параметрами {args} , {kwargs}. Вызов из модуля {func_to_log.__module__}')
+            f'Была вызвана функция {func_to_log.__name__} c '
+            f'параметрами {args} , {kwargs}. Вызов из '
+            f'модуля {func_to_log.__module__}')
         ret = func_to_log(*args, **kwargs)
         return ret
 

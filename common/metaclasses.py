@@ -20,8 +20,8 @@ class ServerMaker(type):
             except TypeError:
                 pass
             else:
-                # Раз функция разбираем код, получая используемые методы и
-                # атрибуты.
+                # Раз функция разбираем код, получая используемые
+                # методы и атрибуты.
                 for i in ret:
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:
